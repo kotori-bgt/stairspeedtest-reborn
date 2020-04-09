@@ -4,7 +4,10 @@
 [![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/tindy2013/stairspeedtest-reborn.svg)](https://github.com/tindy2013/stairspeedtest-reborn/tags)
 [![GitHub release](https://img.shields.io/github/release/tindy2013/stairspeedtest-reborn.svg)](https://github.com/tindy2013/stairspeedtest-reborn/releases)
 [![GitHub license](https://img.shields.io/github/license/tindy2013/stairspeedtest-reborn.svg)](https://github.com/tindy2013/stairspeedtest-reborn/blob/master/LICENSE)
-  
+
+## Docker
+docker run -d --name ssrspeed -p :65430 -v /root/results:/app/results mylolis/stairspeedtest
+
 ## Intro
 This is a C++ remake version of the original [Stair Speedtest](https://github.com/tindy2013/stairspeedtest) script. Despite its similarity to the script verion, this remake version works much more effectively, with faster node parsing, result picture rendering and even cross-platform support.  
 
