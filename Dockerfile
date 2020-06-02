@@ -8,7 +8,7 @@ WORKDIR /app
 
 RUN wget https://github.com/kotori-bgt/stairspeedtest-reborn/releases/download/beta/stairspeedtest_reborn_linux64.zip && \
     unzip stairspeedtest_reborn_linux64.zip && \
-    chmod +x * && \
+    chmod -R +x * && \
     rm -f stairspeedtest_reborn_linux64.zip && \
     rm -f pref.ini && \
     mv tools/gui/gui.html tools/gui/index.html
