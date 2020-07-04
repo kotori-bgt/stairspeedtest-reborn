@@ -10,9 +10,7 @@ RUN wget https://github.com/kotori-bgt/stairspeedtest-reborn/releases/download/b
     unzip stairspeedtest_reborn_linux64.zip && \
     chmod -R +x * && \
     rm -f stairspeedtest_reborn_linux64.zip && \
-    rm -f pref.ini && \
     mv tools/gui/gui.html tools/gui/index.html
-COPY pref.ini .
 VOLUME ["/app/results"]
 EXPOSE 65430
 ENTRYPOINT [ "./webgui.sh"]
