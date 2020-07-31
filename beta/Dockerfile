@@ -8,8 +8,12 @@ WORKDIR /app
 
 RUN wget https://github.com/kotori-bgt/stairspeedtest-reborn/releases/download/beta/stairspeedtest_reborn_linux64.zip && \
     unzip stairspeedtest_reborn_linux64.zip && \
-    chmod -R +x * && \
+    tar xvf stairspeedtest_reborn_linux64.tar.gz && \
+    mv stairspeedtest stairspeedtest_tmp && \
     rm -f stairspeedtest_reborn_linux64.zip && \
+    rm -f stairspeedtest_reborn_linux64.tar.gz && \
+    mv stairspeedtest_tmp/* . && \
+    rm -rf stairspeedtest_tmp && \
     mv tools/gui/gui.html tools/gui/index.html
 VOLUME ["/app/results"]
 EXPOSE 65430
