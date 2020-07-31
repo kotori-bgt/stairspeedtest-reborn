@@ -1,6 +1,6 @@
 FROM ubuntu:bionic
 RUN apt-get update
-RUN apt-get --no-install-recommends install git curl wget unzip ca-certificates -y
+RUN apt-get --no-install-recommends install curl wget tar unzip ca-certificates -y
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo "Asia/Shanghai" > /etc/timezone && \
     apt-get install -y tzdata && \
     dpkg-reconfigure -f noninteractive tzdata
@@ -15,6 +15,7 @@ RUN wget https://github.com/kotori-bgt/stairspeedtest-reborn/releases/download/b
     mv stairspeedtest_tmp/* . && \
     rm -rf stairspeedtest_tmp && \
     mv tools/gui/gui.html tools/gui/index.html
+RUN apt-get remove unzip -y
 VOLUME ["/app/results"]
 EXPOSE 65430
 ENTRYPOINT [ "./webgui.sh"]
