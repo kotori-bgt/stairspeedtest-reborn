@@ -1,6 +1,6 @@
 FROM ubuntu:bionic
 RUN apt-get update
-RUN apt-get --no-install-recommends install git curl wget ca-certificates -y
+RUN apt-get --no-install-recommends install curl wget ca-certificates -y
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo "Asia/Shanghai" > /etc/timezone && \
     apt-get install -y tzdata && \
     dpkg-reconfigure -f noninteractive tzdata
