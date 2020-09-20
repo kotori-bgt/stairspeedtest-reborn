@@ -6,7 +6,7 @@ RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo "Asia/Shangh
     dpkg-reconfigure -f noninteractive tzdata
 WORKDIR /app
 
-RUN wget https://github.com/tindy2013/stairspeedtest-reborn/releases/download/v0.7.0/stairspeedtest_reborn_linux64.tar.gz && \
+RUN wget https://github.com/tindy2013/stairspeedtest-reborn/releases/download/v0.7.1/stairspeedtest_reborn_linux64.tar.gz && \
     tar xvf stairspeedtest_reborn_linux64.tar.gz && \
     mv stairspeedtest stairspeedtest_tmp && \
     rm -f stairspeedtest_reborn_linux64.tar.gz && \
